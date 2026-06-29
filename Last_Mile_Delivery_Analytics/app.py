@@ -129,50 +129,47 @@ col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
 # -------------------------------
 
 with tab2:
-   st.divider()
+    st.divider()
 
-st.header(" Python Analysis")
+    st.header("🐍 Python Analysis")
 
-python_path = base_path / "Screenshots" / "Python"
+    python_path = base_path / "Screenshots" / "Python"
 
-col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-with col1:
-    st.image(str(python_path / "01_dataset_preview.png"), caption="Dataset Preview")
-    st.image(str(python_path / "03_dataset_shape.png"), caption="Dataset Shape")
-    st.image(str(python_path / "05_city_orders_table.png"), caption="City Orders")
+    with col1:
+        st.image(str(python_path / "01_dataset_preview.png"), caption="Dataset Preview")
+        st.image(str(python_path / "03_dataset_shape.png"), caption="Dataset Shape")
+        st.image(str(python_path / "05_city_orders_table.png"), caption="City Orders")
 
-with col2:
-    st.image(str(python_path / "02_missing_values.png"), caption="Missing Values")
-    st.image(str(python_path / "04_columns_list.png"), caption="Columns")
-    st.image(str(python_path / "06_vendor_orders_table.png"), caption="Vendor Orders")
+    with col2:
+        st.image(str(python_path / "02_missing_values.png"), caption="Missing Values")
+        st.image(str(python_path / "04_columns_list.png"), caption="Columns")
+        st.image(str(python_path / "06_vendor_orders_table.png"), caption="Vendor Orders")
 
-st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons")
-
+    st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons")
 # -------------------------------
 # SQL
 # -------------------------------
 
 with tab3:
+    st.divider()
 
-   st.divider()
+    st.header("🗄️ SQL Analysis")
 
-st.header("🗄️ SQL Analysis")
+    sql_path = base_path / "Screenshots" / "SQL"
 
-sql_path = base_path / "Screenshots" / "SQL"
+    col1, col2 = st.columns(2)
 
-col1, col2 = st.columns(2)
+    with col1:
+        st.image(str(sql_path / "01_kpi_summary.png"), caption="KPI Summary")
+        st.image(str(sql_path / "03_city_avg_delay.png"), caption="City Average Delay")
+        st.image(str(sql_path / "05_delay_root_causes.png"), caption="Delay Root Causes")
 
-with col1:
-    st.image(str(sql_path / "01_kpi_summary.png"), caption="KPI Summary")
-    st.image(str(sql_path / "03_city_avg_delay.png"), caption="City Average Delay")
-    st.image(str(sql_path / "05_delay_root_causes.png"), caption="Delay Root Causes")
-
-with col2:
-    st.image(str(sql_path / "02_city_wise_orders.png"), caption="City Wise Orders")
-    st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
-    st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
-
+    with col2:
+        st.image(str(sql_path / "02_city_wise_orders.png"), caption="City Wise Orders")
+        st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
+        st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
 
 st.divider()
 
