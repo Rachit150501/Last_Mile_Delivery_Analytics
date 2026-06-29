@@ -33,8 +33,10 @@ An end-to-end data analytics project that analyzes **5,200 e-commerce delivery r
 
 ### Dataset Preview
 
-![Dataset Preview](Screenshots/Python/01_dataset_preview.png)
+![Dataset Preview](./Last_Mile_Delivery_Analytics/Screenshots/Python/01_dataset_preview.png)
 Last_Mile_Delivery_Analytics
+![Total Customers](./VerifyIQ-Customer-Risk-Monitoring/screenshots/total_clients.png)
+
 
 ### Missing Values
 
