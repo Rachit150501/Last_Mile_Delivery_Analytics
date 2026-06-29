@@ -209,7 +209,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.divider()
 
-st.header("🚚 Vendor Performance")
+st.header(" Vendor Performance")
 
 vendor_orders = (
     filtered_df.groupby("Vendor")
@@ -311,7 +311,7 @@ col3.metric("💰 Revenue", "₹38.85M")
 
 st.divider()
 
-st.header("💡 Key Business Insights")
+st.header(" Key Business Insights")
 
 st.success("""
 ✔ 5,200 Orders Analyzed
