@@ -1,20 +1,24 @@
 import streamlit as st
+from pathlib import Path
 
+# -------------------------------
 # Page Configuration
+# -------------------------------
 st.set_page_config(
     page_title="Last Mile Delivery Analytics",
     page_icon="🚚",
     layout="wide"
 )
 
+# -------------------------------
 # Title
+# -------------------------------
 st.title("🚚 Last Mile Delivery Analytics Dashboard")
 
-# Project Overview
 st.markdown("""
 ## 📌 Project Overview
 
-This project analyzes **last-mile delivery operations** using **Python, SQL, Excel, and Power BI**.
+This project analyzes **Last Mile Delivery Operations** using **Python, SQL, Excel, and Power BI**.
 
 ### 🛠️ Tools Used
 - 🐍 Python
@@ -34,26 +38,35 @@ This project analyzes **last-mile delivery operations** using **Python, SQL, Exc
 
 st.divider()
 
-# Dashboard
+# -------------------------------
+# Dashboard Image
+# -------------------------------
+
 st.header("📊 Power BI Dashboard")
 
-try:
-   st.image(
-    "Screenshots/Power_Bi/dashboard.png",
-    use_container_width=True
-)
-except:
-    st.error("Dashboard image not found. Please check the image path.")
+base_path = Path(__file__).parent
+
+image_path = base_path / "Screenshots" / "Power_Bi" / "dashboard.png"
+
+if image_path.exists():
+    st.image(str(image_path), use_container_width=True)
+else:
+    st.error("❌ Dashboard image not found.")
+    st.write("Expected path:")
+    st.code(str(image_path))
 
 st.divider()
 
+# -------------------------------
 # About Project
+# -------------------------------
+
 st.header("📖 About Project")
 
-st.write("""
+st.markdown("""
 This project focuses on analyzing last-mile delivery performance across multiple cities.
 
-The dashboard helps identify:
+### Dashboard Insights
 
 - 📦 Total Orders
 - ⏱️ Average Delivery Time
@@ -63,9 +76,17 @@ The dashboard helps identify:
 - ⚠️ SLA Breaches
 - 📈 Monthly Order Trends
 
-The project was built using Python, SQL, Excel and Power BI to demonstrate end-to-end data analytics skills.
+### Technologies Used
+
+- Python
+- SQL
+- Excel
+- Power BI
+- Streamlit
+
+This project demonstrates an end-to-end Data Analytics workflow from data cleaning to dashboard development.
 """)
 
 st.divider()
 
-st.success("✅ Project Developed by Rachit Bajpai")
+st.success("✅ Developed by Rachit Bajpai")
