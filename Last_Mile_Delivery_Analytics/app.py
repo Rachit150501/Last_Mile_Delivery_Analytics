@@ -415,9 +415,7 @@ This project demonstrates an end-to-end Data Analytics workflow from data cleani
 """)
 
 
-# -------------------------------
-# Footer
-# -------------------------------
+
 
 st.divider()
 
