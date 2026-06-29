@@ -38,10 +38,10 @@ st.divider()
 st.header("📊 Power BI Dashboard")
 
 try:
-    st.image(
-        "Screenshots/Power bi/dashboard.png",
-        use_container_width=True
-    )
+   st.image(
+    "Screenshots/Power_Bi/dashboard.png",
+    use_container_width=True
+)
 except:
     st.error("Dashboard image not found. Please check the image path.")
 
