@@ -40,25 +40,25 @@ if selected_vendor != "All":
 # -------------------------------
 st.set_page_config(
     page_title="Last Mile Delivery Analytics",
-    page_icon="🚚",
+    page_icon="",
     layout="wide"
 )
 
 # -------------------------------
 # Title
 # -------------------------------
-st.title("🚚 Last Mile Delivery Analytics Dashboard")
+st.title(" Last Mile Delivery Analytics Dashboard")
 
 st.markdown("""
-## 📌 Project Overview
+##  Project Overview
 
 This project analyzes **Last Mile Delivery Operations** using **Python, SQL, Excel, and Power BI**.
 
-### 🛠️ Tools Used
-- 🐍 Python
-- 🗄️ SQL
-- 📊 Power BI
-- 📑 Excel
+###  Tools Used
+-  Python
+-  SQL
+-  Power BI
+-  Excel
 
 ### 📈 Key KPIs
 - Total Orders
@@ -118,7 +118,7 @@ col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
 
 st.divider()
 
-st.header("🐍 Python Analysis")
+st.header(" Python Analysis")
 
 python_path = base_path / "Screenshots" / "Python"
 
@@ -165,7 +165,7 @@ with col2:
 
 st.divider()
 
-st.header("📂 Dataset Information")
+st.header(" Dataset Information")
 
 col1, col2, col3 = st.columns(3)
 
@@ -218,12 +218,12 @@ st.divider()
 st.header("🛠 Tech Stack")
 
 st.markdown("""
-- 🐍 Python (Pandas)
-- 🗄 SQL
-- 📊 Power BI
-- 📑 Excel
-- 🌐 Streamlit
-- 💻 GitHub
+-  Python (Pandas)
+-  SQL
+-  Power BI
+-  Excel
+-  Streamlit
+-  GitHub
 """)
 
 # -------------------------------
@@ -247,11 +247,11 @@ st.markdown("---")
 
 st.markdown(
 """
-### 👨‍💻 Developed by Rachit Bajpai
+###  Developed by Rachit Bajpai
 
 📊 Data Analyst Portfolio Project
 
-⭐ Thank you for visiting!
+ Thank you for visiting!
 """
 )
 
