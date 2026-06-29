@@ -87,8 +87,8 @@ tab1, tab2, tab3, tab4 = st.tabs([
 # Dashboard Image
 # -------------------------------
 
-
-st.header("📊 Power BI Dashboard")
+with tab1:
+    st.header("📊 Power BI Dashboard")
 
 
 image_path = base_path / "Screenshots" / "Power_Bi" / "dashboard.png"
@@ -129,7 +129,7 @@ col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
 # -------------------------------
 
 with tab2:
-st.divider()
+   st.divider()
 
 st.header(" Python Analysis")
 
@@ -155,7 +155,7 @@ st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons
 
 with tab3:
 
-st.divider()
+   st.divider()
 
 st.header("🗄️ SQL Analysis")
 
