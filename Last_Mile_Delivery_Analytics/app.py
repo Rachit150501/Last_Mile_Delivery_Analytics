@@ -290,6 +290,10 @@ st.dataframe(
     use_container_width=True
 )
 
+# -------------------------------
+# Top Performing Vendors
+# -------------------------------
+
 
 vendor = (
     filtered_df.groupby("Vendor")
