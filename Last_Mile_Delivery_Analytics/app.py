@@ -385,26 +385,6 @@ st.markdown("[👉 View Complete Project on GitHub](https://github.com/Rachit150
 
 
 # -------------------------------
-# Footer
-# -------------------------------
-
-st.divider()
-
-st.markdown("---")
-
-st.markdown(
-"""
-###  Developed by Rachit Bajpai
-
-📊 Data Analyst Portfolio Project
-
- Thank you for visiting!
-"""
-)
-
-
-
-# -------------------------------
 # About Project
 # -------------------------------
 
@@ -433,6 +413,27 @@ This project focuses on analyzing last-mile delivery performance across multiple
 
 This project demonstrates an end-to-end Data Analytics workflow from data cleaning to dashboard development.
 """)
+
+
+# -------------------------------
+# Footer
+# -------------------------------
+
+st.divider()
+
+st.markdown("---")
+
+st.markdown(
+"""
+###  Developed by Rachit Bajpai
+
+📊 Data Analyst Portfolio Project
+
+ Thank you for visiting!
+"""
+)
+
+
 
 st.divider()
 
