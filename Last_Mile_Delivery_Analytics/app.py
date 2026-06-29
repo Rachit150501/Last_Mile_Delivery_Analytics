@@ -13,6 +13,28 @@ base_path = Path(__file__).parent
 data_path = base_path / "Dataset" / "Last_Mile_Delivery_Dataset.csv"
 df = pd.read_csv(data_path)
 
+
+st.sidebar.header(" Filters")
+
+selected_city = st.sidebar.selectbox(
+    "Select City",
+    ["All"] + sorted(df["City"].unique().tolist())
+)
+
+selected_vendor = st.sidebar.selectbox(
+    "Select Vendor",
+    ["All"] + sorted(df["Vendor"].unique().tolist())
+)
+
+# Apply Filters
+filtered_df = df.copy()
+
+if selected_city != "All":
+    filtered_df = filtered_df[filtered_df["City"] == selected_city]
+
+if selected_vendor != "All":
+    filtered_df = filtered_df[filtered_df["Vendor"] == selected_vendor]
+
 # -------------------------------
 # Page Configuration
 # -------------------------------
@@ -70,12 +92,12 @@ st.divider()
 
 
 # -------------------------------
-# Live KPI Dashboard
+#  KPI Dashboard
 # -------------------------------
 
 st.header("📊 Live KPI Dashboard")
 
-total_orders = len(df)
+total_orders = len(filtered_df)
 total_revenue = df["Order_Value_INR"].sum()
 delayed_orders = (df["Is_Delayed"] == "Yes").sum()
 sla_breaches = (df["SLA_Breached"] == "Yes").sum()
