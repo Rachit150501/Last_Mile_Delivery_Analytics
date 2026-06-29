@@ -95,7 +95,7 @@ st.divider()
 
 
 # -------------------------------
-#  KPI Dashboard
+# KPI Dashboard
 # -------------------------------
 
 st.header("📊 Live KPI Dashboard")
