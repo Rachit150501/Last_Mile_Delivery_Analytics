@@ -1,13 +1,12 @@
-# 🚚 Last-Mile Delivery Analytics & Delay Root Cause Analysis
+#  Last-Mile Delivery Analytics & Delay Root Cause Analysis
 
 ![dashboard](Screenshots/Power%20bi/Last%20Mile%20Delivery%20Dashboard.png)
-![dashboard](./Last_Mile_Delivery_Analytics/Screenshots/Power_Bi/dashboard.png)
 
 > An end-to-end **e-commerce delivery analytics** project analyzing 5,200 delivery records across 15 Indian cities to uncover delay patterns, SLA breaches, vendor performance, and root causes — built using **Python**, **SQL**, **Excel**, and **Power BI**.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Tech Stack](#tech-stack)
@@ -24,23 +23,23 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The project focuses on analysing:
 
-- 📦 Delivery delay trends & SLA breach patterns
-- 🏙️ City & zone-wise operational performance
-- 🏭 Warehouse efficiency & throughput analysis
-- 👨‍💼 Delivery agent productivity & outlier detection
-- 🔍 Root cause analysis of delivery failures
-- 🌧️ Seasonal impact — Festive (Oct–Nov) & Monsoon (Jun–Sep) seasons
-- 💳 COD vs Prepaid payment mode impact on delays
+-  Delivery delay trends & SLA breach patterns
+-  City & zone-wise operational performance
+-  Warehouse efficiency & throughput analysis
+-  Delivery agent productivity & outlier detection
+-  Root cause analysis of delivery failures
+-  Seasonal impact — Festive (Oct–Nov) & Monsoon (Jun–Sep) seasons
+-  COD vs Prepaid payment mode impact on delays
 
 The dashboard helps track operational KPIs and provides actionable business insights for improving last-mile delivery efficiency.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Tool | Purpose |
 |---|---|
@@ -53,7 +52,7 @@ The dashboard helps track operational KPIs and provides actionable business insi
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Last_Mile_Delivery_Analytics/
@@ -87,7 +86,7 @@ Last_Mile_Delivery_Analytics/
 
 ---
 
-## 📊 Dataset Overview
+##  Dataset Overview
 
 | Metric | Value |
 |---|---|
@@ -102,7 +101,7 @@ Last_Mile_Delivery_Analytics/
 | **SLA Breached** | **1,459 (28.1%)** |
 | Avg Delay (when delayed) | 3.9 days |
 
-### 📌 Key Columns
+###  Key Columns
 
 | Column | Description |
 |---|---|
@@ -125,7 +124,7 @@ Last_Mile_Delivery_Analytics/
 
 ---
 
-## 🐍 Python — Exploratory Data Analysis
+##  Python — Exploratory Data Analysis
 
 EDA performed in `Python/eda.ipynb` covering:
 
@@ -139,7 +138,9 @@ EDA performed in `Python/eda.ipynb` covering:
 
 | Dataset Preview | Missing Values | Dataset Shape |
 |---|---|---|
-| ![](Screenshots/Python/01_dataset_preview.png) | ![](Screenshots/Python/02_missing_values.png) | ![](Screenshots/Python/03_dataset_shape.png) |
+| ![Dataset Preview](./Last_Mile_Delivery_Analytics/Screenshots/Python/01_dataset_preview.png) |
+![ Missing Values](./Last_Mile_Delivery_Analytics/Screenshots/Python/02_missing_values.png) |
+![Dataset Shape ](./Last_Mile_Delivery_Analytics/Screenshots/Python/03_dataset_shape.png) |
 
 | Columns List | City Orders Table | Vendor Orders Table |
 |---|---|---|
