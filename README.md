@@ -147,7 +147,7 @@ EDA performed in `Python/eda.ipynb` covering:
 ![Vendor Orders Table](./Last_Mile_Delivery_Analytics/Screenshots/Python/06_vendor_orders_table.png) |
 
 | Delay Reasons Table |
-|---|
+|---|---|---|
 | ![ Delay Reasons Table](./Last_Mile_Delivery_Analytics/Screenshots/Python/07_delay_reasons_table.png) |
 
 ---
@@ -228,15 +228,3 @@ EDA performed in `Python/eda.ipynb` covering:
 - Git & GitHub Version Control
 
 ---
-
-## ⚠️ Disclaimer
-
-> This dataset is **synthetically generated** for portfolio/learning purposes using realistic Indian e-commerce delivery patterns. All Order IDs and Agent IDs are fictional.
-
----
-
-## 👤 Author
-
-Made with ❤️ for data analytics portfolio showcase.
-
-Feel free to ⭐ this repo if you found it helpful!
