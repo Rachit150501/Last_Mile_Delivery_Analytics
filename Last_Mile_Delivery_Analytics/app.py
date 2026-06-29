@@ -107,7 +107,7 @@ st.divider()
 # KPI Dashboard
 # -------------------------------
 
-st.header("📊 Live KPI Dashboard")
+st.header("📊  KPI Dashboard")
 
 total_orders = len(filtered_df)
 total_revenue = df["Order_Value_INR"].sum()
@@ -120,7 +120,12 @@ col1.metric("📦 Total Orders", f"{total_orders:,}")
 col2.metric("💰 Total Revenue", f"₹{total_revenue:,.2f}")
 col3.metric("🚚 Delayed Orders", f"{delayed_orders:,}")
 col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
+delay_rate = (delayed_orders / total_orders) * 100
 
+st.metric(
+    "📉 Delay Rate",
+    f"{delay_rate:.2f}%"
+)
 
 
 
@@ -297,7 +302,7 @@ st.dataframe(
 
 st.divider()
 
-st.header("🏆 Top Performing Vendors")
+st.header(" Top Performing Vendors")
 
 vendor = (
     filtered_df.groupby("Vendor")
@@ -319,13 +324,24 @@ st.header(" Dataset Information")
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric("📦 Total Orders", "5,200")
-col2.metric("🏙️ Cities", "15")
-col3.metric("🚚 Vendors", "8")
+col1.metric("📦 Total Orders", len(filtered_df))
+col2.metric("🏙️ Cities", filtered_df["City"].nunique())
+col3.metric("🚚 Vendors", filtered_df["Vendor"].nunique())
 
-col1.metric("⚠️ Delayed Orders", "2,236")
-col2.metric("📉 SLA Breaches", "1,459")
-col3.metric("💰 Revenue", "₹38.85M")
+col1.metric(
+    "⚠️ Delayed Orders",
+    (filtered_df["Is_Delayed"] == "Yes").sum()
+)
+
+col2.metric(
+    "📉 SLA Breaches",
+    (filtered_df["SLA_Breached"] == "Yes").sum()
+)
+
+col3.metric(
+    "💰 Revenue",
+    f"₹{filtered_df['Order_Value_INR'].sum():,.0f}"
+)
 
 
 
@@ -388,24 +404,32 @@ st.divider()
 
 st.header(" Key Business Insights")
 
-st.success("""
-✔ 5,200 Orders Analyzed
+highest_city = (
+    filtered_df.groupby("City")["Order_ID"]
+    .count()
+    .idxmax()
+)
 
-✔ 15 Cities Covered
+top_vendor = (
+    filtered_df.groupby("Vendor")["Order_ID"]
+    .count()
+    .idxmax()
+)
 
-✔ 43% Orders Delayed
+top_category = (
+    filtered_df.groupby("Product_Category")["Order_Value_INR"]
+    .sum()
+    .idxmax()
+)
 
-✔ 28% SLA Breaches
+st.success(f"""
+Highest Order City: **{highest_city}**
 
-✔ Revenue ₹38.85 Million
+Top Performing Vendor: **{top_vendor}**
 
-✔ Delay Reasons Analysis
+Highest Revenue Category: **{top_category}**
 
-✔ Vendor Performance Comparison
-
-✔ City-wise Delivery Analysis
-
-✔ Product Category Revenue Analysis
+Total Orders: **{len(filtered_df):,}**
 """)
 
 
