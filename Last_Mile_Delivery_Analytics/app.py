@@ -318,7 +318,36 @@ else:
 st.info(f"Dataset Shape: {filtered_df.shape[0]} Rows × {filtered_df.shape[1]} Columns")
 
 
+# -------------------------------
+# Download Dataset
+# -------------------------------
 
+st.divider()
+
+st.header(" Download Dataset")
+
+st.write("You can download the complete Last Mile Delivery dataset in CSV format.")
+
+csv = filtered_df.to_csv(index=False).encode("utf-8")
+
+col1, col2 = st.columns([1, 4])
+
+with col1:
+    st.download_button(
+        label="⬇️ Download CSV",
+        data=csv,
+        file_name="Last_Mile_Delivery_Dataset.csv",
+        mime="text/csv"
+    )
+
+with col2:
+    st.info(f"""
+📂 **File Name:** Last_Mile_Delivery_Dataset.csv
+
+📊 **Rows:** {len(filtered_df):,}
+
+📑 **Columns:** {filtered_df.shape[1]}
+""")
 
 
 if st.checkbox("📂 Show Full Dataset"):
