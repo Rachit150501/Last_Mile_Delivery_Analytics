@@ -144,11 +144,13 @@ EDA performed in `Python/eda.ipynb` covering:
 
 | Columns List | City Orders Table | Vendor Orders Table |
 |---|---|---|
-| ![](Screenshots/Python/04_columns_list.png) | ![](Screenshots/Python/05_city_orders_table.png) | ![](Screenshots/Python/06_vendor_orders_table.png) |
+| ![Columns List ](./Last_Mile_Delivery_Analytics/Screenshots/Python/04_columns_list.png) |
+![City Orders Table](./Last_Mile_Delivery_Analytics/Screenshots/Python/05_city_orders_table.png) |
+![Vendor Orders Table](./Last_Mile_Delivery_Analytics/Screenshots/Python/06_vendor_orders_table.png) |
 
 | Delay Reasons Table |
 |---|
-| ![](Screenshots/Python/07_delay_reasons_table.png) |
+| ![ Delay Reasons Table](./Last_Mile_Delivery_Analytics/Screenshots/Python/07_delay_reasons_table.png) |
 
 ---
 
@@ -173,11 +175,15 @@ EDA performed in `Python/eda.ipynb` covering:
 
 | KPI Summary | City-wise Orders | City Avg Delay |
 |---|---|---|
-| ![](Screenshots/SQL/01_kpi_summary.png) | ![](Screenshots/SQL/02_city_wise_orders.png) | ![](Screenshots/SQL/03_city_avg_delay.png) |
+| ![KPI Summary ](./Last_Mile_Delivery_Analytics/Screenshots/SQL/01_kpi_summary.png) |
+![City-wise Orders](./Last_Mile_Delivery_Analytics/Screenshots/SQL/02_city_wise_orders.png) |
+![ City Avg Delay](./Last_Mile_Delivery_Analytics/Screenshots/SQL/03_city_avg_delay.png) |
 
 | Vendor Performance | Delay Root Causes | Revenue by Category |
 |---|---|---|
-| ![](Screenshots/SQL/04_vendor_performance.png) | ![](Screenshots/SQL/05_delay_root_causes.png) | ![](Screenshots/SQL/06_revenue_by_category.png) |
+| ![Vendor Performance](./Last_Mile_Delivery_Analytics/Screenshots/SQL/04_vendor_performance.png) |
+![Delay Root Causes](./Last_Mile_Delivery_Analytics/Screenshots/SQL/05_delay_root_causes.png) |
+![Revenue by Category](./Last_Mile_Delivery_Analytics/Screenshots/SQL/06_revenue_by_category.png) |
 
 ---
 
@@ -200,7 +206,7 @@ EDA performed in `Python/eda.ipynb` covering:
 
 ---
 
-## 💡 Key Business Insights
+##  Key Business Insights
 
 - **43% of orders** were delayed — highest delays found in specific cities and during festive season (Oct–Nov)
 - **SLA breach rate of 28.1%** with an average delay of 3.9 days for delayed orders
