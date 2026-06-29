@@ -1,52 +1,116 @@
 # 🚚 Last-Mile Delivery Analytics & Delay Root Cause Analysis
 
-## 📸 Power BI Dashboard
-
-<img src="Screenshots/Power%20bi/dashboard.png" width="1000">
+An end-to-end data analytics project that analyzes **5,200 e-commerce delivery records** to identify delay patterns, SLA breaches, vendor performance, seasonal impact, and revenue trends using **Python, SQL, Excel, and Power BI**.
 
 ---
 
-## 🐍 Python Analysis
+# 📊 Dashboard
+
+![Dashboard](Screenshots/Power%20bi/dashboard.png)
+
+---
+
+# 🛠 Tech Stack
+
+- Python (Pandas, Matplotlib)
+- SQL (PostgreSQL)
+- Excel
+- Power BI
+
+---
+
+# 📈 Key KPIs
+
+- Total Orders
+- Delayed Orders
+- SLA Breaches
+- Total Revenue
+- Average Delivery Time
+
+---
+
+# 🐍 Python Analysis
 
 ### Dataset Preview
-<img src="Screenshots/Python/01_dataset_preview.png" width="700">
+
+![Dataset Preview](Screenshots/Python/01_dataset_preview.png)
 
 ### Missing Values
-<img src="Screenshots/Python/02_missing_values.png" width="700">
+
+![Missing Values](Screenshots/Python/02_missing_values.png)
 
 ### Dataset Shape
-<img src="Screenshots/Python/03_dataset_shape.png" width="700">
 
-### Columns List
-<img src="Screenshots/Python/04_columns_list.png" width="700">
+![Dataset Shape](Screenshots/Python/03_dataset_shape.png)
+
+### Columns
+
+![Columns](Screenshots/Python/04_columns_list.png)
 
 ### City Orders
-<img src="Screenshots/Python/05_city_orders_table.png" width="700">
+
+![City Orders](Screenshots/Python/05_city_orders_table.png)
 
 ### Vendor Orders
-<img src="Screenshots/Python/06_vendor_orders_table.png" width="700">
+
+![Vendor Orders](Screenshots/Python/06_vendor_orders_table.png)
 
 ### Delay Reasons
-<img src="Screenshots/Python/07_delay_reasons_table.png" width="700">
+
+![Delay Reasons](Screenshots/Python/07_delay_reasons_table.png)
 
 ---
 
-## 🗄️ SQL Analysis
+# 🗄 SQL Analysis
 
 ### KPI Summary
-<img src="Screenshots/SQL/01_kpi_summary.png" width="700">
+
+![KPI Summary](Screenshots/SQL/01_kpi_summary.png)
 
 ### City-wise Orders
-<img src="Screenshots/SQL/02_city_wise_orders.png" width="700">
+
+![City Orders](Screenshots/SQL/02_city_wise_orders.png)
 
 ### Average Delay
-<img src="Screenshots/SQL/03_city_avg_delay.png" width="700">
+
+![Average Delay](Screenshots/SQL/03_city_avg_delay.png)
 
 ### Vendor Performance
-<img src="Screenshots/SQL/04_vendor_performance.png" width="700">
+
+![Vendor Performance](Screenshots/SQL/04_vendor_performance.png)
 
 ### Delay Root Causes
-<img src="Screenshots/SQL/05_delay_root_causes.png" width="700">
+
+![Delay Root Causes](Screenshots/SQL/05_delay_root_causes.png)
 
 ### Revenue by Category
-<img src="Screenshots/SQL/06_revenue_by_category.png" width="700">
+
+![Revenue by Category](Screenshots/SQL/06_revenue_by_category.png)
+
+---
+
+# 📌 Key Insights
+
+- Analyzed 5,200 delivery records across multiple cities.
+- Identified delay trends and SLA breach patterns.
+- Compared vendor performance and payment modes.
+- Measured seasonal impact on delivery performance.
+- Built an interactive Power BI dashboard for operational monitoring.
+
+---
+
+# 🎯 Skills Demonstrated
+
+- Python
+- SQL
+- PostgreSQL
+- Excel
+- Power BI
+- Data Cleaning
+- Data Analysis
+- Data Visualization
+- Business Intelligence
+
+---
+
+⭐ If you found this project useful, feel free to star the repository.
