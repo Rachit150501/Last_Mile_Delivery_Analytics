@@ -75,10 +75,19 @@ This project analyzes **Last Mile Delivery Operations** using **Python, SQL, Exc
 
 st.divider()
 
+
+tab1, tab2, tab3, tab4 = st.tabs([
+    " Dashboard",
+    " Python",
+    " SQL",
+    " Charts"
+])
+
 # -------------------------------
 # Dashboard Image
 # -------------------------------
 
+with tab1:
 st.header("📊 Power BI Dashboard")
 
 
@@ -119,6 +128,7 @@ col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
 # Python Analysis
 # -------------------------------
 
+with tab2:
 st.divider()
 
 st.header(" Python Analysis")
@@ -142,6 +152,8 @@ st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons
 # -------------------------------
 # SQL
 # -------------------------------
+
+with tab3:
 
 st.divider()
 
