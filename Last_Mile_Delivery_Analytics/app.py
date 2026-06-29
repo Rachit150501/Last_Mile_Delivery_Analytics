@@ -81,6 +81,28 @@ with col2:
 st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons")
 
 # -------------------------------
+# SQL
+# -------------------------------
+
+st.divider()
+
+st.header("🗄️ SQL Analysis")
+
+sql_path = base_path / "Screenshots" / "SQL"
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.image(str(sql_path / "01_kpi_summary.png"), caption="KPI Summary")
+    st.image(str(sql_path / "03_city_avg_delay.png"), caption="City Average Delay")
+    st.image(str(sql_path / "05_delay_root_causes.png"), caption="Delay Root Causes")
+
+with col2:
+    st.image(str(sql_path / "02_city_wise_orders.png"), caption="City Wise Orders")
+    st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
+    st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
+
+# -------------------------------
 # About Project
 # -------------------------------
 
