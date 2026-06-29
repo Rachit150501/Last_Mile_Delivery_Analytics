@@ -69,6 +69,25 @@ else:
 st.divider()
 
 
+# -------------------------------
+# Live KPI Dashboard
+# -------------------------------
+
+st.header("📊 Live KPI Dashboard")
+
+total_orders = len(df)
+total_revenue = df["Order_Value_INR"].sum()
+delayed_orders = (df["Is_Delayed"] == "Yes").sum()
+sla_breaches = (df["SLA_Breached"] == "Yes").sum()
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("📦 Total Orders", f"{total_orders:,}")
+col2.metric("💰 Total Revenue", f"₹{total_revenue:,.2f}")
+col3.metric("🚚 Delayed Orders", f"{delayed_orders:,}")
+col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
+
+
 
 
 # -------------------------------
