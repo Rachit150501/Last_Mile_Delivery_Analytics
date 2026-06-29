@@ -37,26 +37,6 @@ if selected_vendor != "All":
 
 
 
-st.divider()
-
-st.header("💰 Revenue by Product Category")
-
-category_revenue = (
-    filtered_df.groupby("Product_Category")["Order_Value_INR"]
-    .sum()
-    .reset_index()
-)
-
-fig = px.pie(
-    category_revenue,
-    values="Order_Value_INR",
-    names="Product_Category",
-    hole=0.45,
-    title="Revenue by Product Category"
-)
-
-st.plotly_chart(fig, use_container_width=True)
-
 # -------------------------------
 # Page Configuration
 # -------------------------------
@@ -179,6 +159,29 @@ with col2:
     st.image(str(sql_path / "02_city_wise_orders.png"), caption="City Wise Orders")
     st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
     st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
+
+
+st.divider()
+
+st.header("💰 Revenue by Product Category")
+
+category_revenue = (
+    filtered_df.groupby("Product_Category")["Order_Value_INR"]
+    .sum()
+    .reset_index()
+)
+
+fig = px.pie(
+    category_revenue,
+    values="Order_Value_INR",
+    names="Product_Category",
+    hole=0.45,
+    title="Revenue by Product Category"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
 
 
 # -------------------------------
