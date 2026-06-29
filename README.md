@@ -1,7 +1,7 @@
 # 🚚 Last-Mile Delivery Analytics & Delay Root Cause Analysis
 
 ![dashboard](Screenshots/Power%20bi/Last%20Mile%20Delivery%20Dashboard.png)
-![dashboard](./Last_Mile_Delivery_Analytics/Screenshots/Power_bi/dashboard.png)
+![dashboard](./Last_Mile_Delivery_Analytics/Screenshots/Power_Bi/dashboard.png)
 
 > An end-to-end **e-commerce delivery analytics** project analyzing 5,200 delivery records across 15 Indian cities to uncover delay patterns, SLA breaches, vendor performance, and root causes — built using **Python**, **SQL**, **Excel**, and **Power BI**.
 
