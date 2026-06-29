@@ -35,6 +35,28 @@ if selected_city != "All":
 if selected_vendor != "All":
     filtered_df = filtered_df[filtered_df["Vendor"] == selected_vendor]
 
+
+
+st.divider()
+
+st.header("💰 Revenue by Product Category")
+
+category_revenue = (
+    filtered_df.groupby("Product_Category")["Order_Value_INR"]
+    .sum()
+    .reset_index()
+)
+
+fig = px.pie(
+    category_revenue,
+    values="Order_Value_INR",
+    names="Product_Category",
+    hole=0.45,
+    title="Revenue by Product Category"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
 # -------------------------------
 # Page Configuration
 # -------------------------------
