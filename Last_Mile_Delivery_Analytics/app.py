@@ -1,6 +1,7 @@
 import streamlit as st
 from pathlib import Path
 import pandas as pd
+import plotly.express as px
 
 # -------------------------------
 # Base Path
