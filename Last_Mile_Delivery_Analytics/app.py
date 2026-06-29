@@ -28,3 +28,9 @@ The dashboard helps analyze:
 - City-wise Orders
 - Monthly Order Trends
 """)
+st.subheader("📊 Power BI Dashboard")
+
+st.image(
+    "Last_Mile_Delivery_Analytics/Screenshots/Power bi/dashboard.png",
+    use_container_width=True
+)
