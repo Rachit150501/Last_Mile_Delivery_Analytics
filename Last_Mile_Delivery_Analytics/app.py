@@ -400,6 +400,12 @@ if search:
 else:
     st.dataframe(filtered_df.head(20), use_container_width=True)
 
+
+st.info(f"Dataset Shape: {filtered_df.shape[0]} Rows × {filtered_df.shape[1]} Columns")
+
+if st.checkbox("📂 Show Full Dataset"):
+    st.dataframe(filtered_df, use_container_width=True)
+
 # -------------------------------
 # About Project
 # -------------------------------
