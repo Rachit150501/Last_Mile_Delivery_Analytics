@@ -284,7 +284,7 @@ with tab3:
 
 
 
-st.subheader("🚨 Top 10 Delayed Orders")
+st.subheader(" Top 10 Delayed Orders")
 st.dataframe(
     filtered_df.sort_values("Delay_Days", ascending=False).head(10),
     use_container_width=True
@@ -295,13 +295,18 @@ st.dataframe(
 # -------------------------------
 
 
+st.divider()
+
+st.header("🏆 Top Performing Vendors")
+
 vendor = (
     filtered_df.groupby("Vendor")
-    .agg(Total_Orders=("Order_ID","count"))
+    .agg(Total_Orders=("Order_ID", "count"))
     .sort_values("Total_Orders", ascending=False)
 )
 
 st.bar_chart(vendor)
+
 
 
 # -------------------------------
