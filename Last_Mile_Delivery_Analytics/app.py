@@ -390,6 +390,16 @@ st.markdown(
 """
 )
 
+search = st.text_input("🔍 Search Order ID")
+
+if search:
+    result = filtered_df[
+        filtered_df["Order_ID"].astype(str).str.contains(search, case=False)
+    ]
+    st.dataframe(result, use_container_width=True)
+else:
+    st.dataframe(filtered_df.head(20), use_container_width=True)
+
 # -------------------------------
 # About Project
 # -------------------------------
