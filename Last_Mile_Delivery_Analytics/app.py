@@ -102,6 +102,103 @@ with col2:
     st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
     st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
 
+
+# -------------------------------
+# Dataset Information
+# -------------------------------
+
+st.divider()
+
+st.header("📂 Dataset Information")
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric("📦 Total Orders", "5,200")
+col2.metric("🏙️ Cities", "15")
+col3.metric("🚚 Vendors", "8")
+
+col1.metric("⚠️ Delayed Orders", "2,236")
+col2.metric("📉 SLA Breaches", "1,459")
+col3.metric("💰 Revenue", "₹38.85M")
+
+
+
+# -------------------------------
+# Project Highlights
+# -------------------------------
+
+st.divider()
+
+st.header("💡 Key Business Insights")
+
+st.success("""
+✔ 5,200 Orders Analyzed
+
+✔ 15 Cities Covered
+
+✔ 43% Orders Delayed
+
+✔ 28% SLA Breaches
+
+✔ Revenue ₹38.85 Million
+
+✔ Delay Reasons Analysis
+
+✔ Vendor Performance Comparison
+
+✔ City-wise Delivery Analysis
+
+✔ Product Category Revenue Analysis
+""")
+
+
+
+# -------------------------------
+# Tech Stack
+# -------------------------------
+
+st.divider()
+
+st.header("🛠 Tech Stack")
+
+st.markdown("""
+- 🐍 Python (Pandas)
+- 🗄 SQL
+- 📊 Power BI
+- 📑 Excel
+- 🌐 Streamlit
+- 💻 GitHub
+""")
+
+# -------------------------------
+# GitHub Link
+# -------------------------------
+
+st.divider()
+
+st.header("🔗 GitHub Repository")
+
+st.markdown("[👉 View Complete Project on GitHub](https://github.com/Rachit150501/Last_Mile_Delivery_Analytics)")
+
+
+# -------------------------------
+# Footer
+# -------------------------------
+
+st.divider()
+
+st.markdown("---")
+
+st.markdown(
+"""
+### 👨‍💻 Developed by Rachit Bajpai
+
+📊 Data Analyst Portfolio Project
+
+⭐ Thank you for visiting!
+"""
+)
+
 # -------------------------------
 # About Project
 # -------------------------------
