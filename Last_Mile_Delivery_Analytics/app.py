@@ -124,53 +124,6 @@ col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
 
 
 
-# -------------------------------
-# Python Analysis
-# -------------------------------
-
-with tab2:
-    st.divider()
-
-    st.header("🐍 Python Analysis")
-
-    python_path = base_path / "Screenshots" / "Python"
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.image(str(python_path / "01_dataset_preview.png"), caption="Dataset Preview")
-        st.image(str(python_path / "03_dataset_shape.png"), caption="Dataset Shape")
-        st.image(str(python_path / "05_city_orders_table.png"), caption="City Orders")
-
-    with col2:
-        st.image(str(python_path / "02_missing_values.png"), caption="Missing Values")
-        st.image(str(python_path / "04_columns_list.png"), caption="Columns")
-        st.image(str(python_path / "06_vendor_orders_table.png"), caption="Vendor Orders")
-
-    st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons")
-# -------------------------------
-# SQL
-# -------------------------------
-
-with tab3:
-    st.divider()
-
-    st.header("🗄️ SQL Analysis")
-
-    sql_path = base_path / "Screenshots" / "SQL"
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.image(str(sql_path / "01_kpi_summary.png"), caption="KPI Summary")
-        st.image(str(sql_path / "03_city_avg_delay.png"), caption="City Average Delay")
-        st.image(str(sql_path / "05_delay_root_causes.png"), caption="Delay Root Causes")
-
-    with col2:
-        st.image(str(sql_path / "02_city_wise_orders.png"), caption="City Wise Orders")
-        st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
-        st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
-
 st.divider()
 
 st.header(" Revenue by Product Category")
@@ -281,18 +234,55 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 
-st.divider()
 
-st.header(" Download Dataset")
+# -------------------------------
+# Python Analysis
+# -------------------------------
 
-csv = filtered_df.to_csv(index=False)
+with tab2:
+    st.divider()
 
-st.download_button(
-    label="Download CSV",
-    data=csv,
-    file_name="Last_Mile_Delivery.csv",
-    mime="text/csv"
-)
+    st.header("🐍 Python Analysis")
+
+    python_path = base_path / "Screenshots" / "Python"
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.image(str(python_path / "01_dataset_preview.png"), caption="Dataset Preview")
+        st.image(str(python_path / "03_dataset_shape.png"), caption="Dataset Shape")
+        st.image(str(python_path / "05_city_orders_table.png"), caption="City Orders")
+
+    with col2:
+        st.image(str(python_path / "02_missing_values.png"), caption="Missing Values")
+        st.image(str(python_path / "04_columns_list.png"), caption="Columns")
+        st.image(str(python_path / "06_vendor_orders_table.png"), caption="Vendor Orders")
+
+    st.image(str(python_path / "07_delay_reasons_table.png"), caption="Delay Reasons")
+# -------------------------------
+# SQL
+# -------------------------------
+
+with tab3:
+    st.divider()
+
+    st.header("🗄️ SQL Analysis")
+
+    sql_path = base_path / "Screenshots" / "SQL"
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.image(str(sql_path / "01_kpi_summary.png"), caption="KPI Summary")
+        st.image(str(sql_path / "03_city_avg_delay.png"), caption="City Average Delay")
+        st.image(str(sql_path / "05_delay_root_causes.png"), caption="Delay Root Causes")
+
+    with col2:
+        st.image(str(sql_path / "02_city_wise_orders.png"), caption="City Wise Orders")
+        st.image(str(sql_path / "04_vendor_performance.png"), caption="Vendor Performance")
+        st.image(str(sql_path / "06_revenue_by_category.png"), caption="Revenue by Category")
+
+
 
 # -------------------------------
 # Dataset Information
@@ -311,6 +301,28 @@ col3.metric("🚚 Vendors", "8")
 col1.metric("⚠️ Delayed Orders", "2,236")
 col2.metric("📉 SLA Breaches", "1,459")
 col3.metric("💰 Revenue", "₹38.85M")
+
+
+
+search = st.text_input("🔍 Search Order ID")
+
+if search:
+    result = filtered_df[
+        filtered_df["Order_ID"].astype(str).str.contains(search, case=False)
+    ]
+    st.dataframe(result, use_container_width=True)
+else:
+    st.dataframe(filtered_df.head(20), use_container_width=True)
+
+
+st.info(f"Dataset Shape: {filtered_df.shape[0]} Rows × {filtered_df.shape[1]} Columns")
+
+
+
+
+
+if st.checkbox("📂 Show Full Dataset"):
+    st.dataframe(filtered_df, use_container_width=True)
 
 
 
@@ -390,21 +402,7 @@ st.markdown(
 """
 )
 
-search = st.text_input("🔍 Search Order ID")
 
-if search:
-    result = filtered_df[
-        filtered_df["Order_ID"].astype(str).str.contains(search, case=False)
-    ]
-    st.dataframe(result, use_container_width=True)
-else:
-    st.dataframe(filtered_df.head(20), use_container_width=True)
-
-
-st.info(f"Dataset Shape: {filtered_df.shape[0]} Rows × {filtered_df.shape[1]} Columns")
-
-if st.checkbox("📂 Show Full Dataset"):
-    st.dataframe(filtered_df, use_container_width=True)
 
 # -------------------------------
 # About Project
