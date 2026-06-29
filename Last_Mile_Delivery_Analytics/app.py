@@ -1,6 +1,13 @@
 import streamlit as st
 from pathlib import Path
 
+
+import pandas as pd
+
+data_path = base_path / "Dataset" / "Last_Mile_Delivery_Dataset.csv"
+
+df = pd.read_csv(data_path)
+
 # -------------------------------
 # Page Configuration
 # -------------------------------
@@ -56,6 +63,22 @@ else:
     st.code(str(image_path))
 
 st.divider()
+
+st.divider()
+
+st.header("📊 Live KPI Dashboard")
+
+total_orders = len(df)
+total_revenue = df["Order_Value_INR"].sum()
+delayed_orders = (df["Is_Delayed"] == "Y").sum()
+sla_breaches = (df["SLA_Breached"] == "Y").sum()
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("📦 Total Orders", f"{total_orders:,}")
+col2.metric("💰 Total Revenue", f"₹{total_revenue:,.0f}")
+col3.metric("🚚 Delayed Orders", f"{delayed_orders:,}")
+col4.metric("⚠️ SLA Breaches", f"{sla_breaches:,}")
 # -------------------------------
 # Python Analysis
 # -------------------------------
