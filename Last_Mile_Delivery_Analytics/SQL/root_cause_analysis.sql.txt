@@ -1,0 +1,7 @@
+-- Delay Reasons
+
+SELECT delay_reason,
+COUNT(*) AS total_cases
+FROM deliveries
+GROUP BY delay_reason
+ORDER BY total_cases DESC;

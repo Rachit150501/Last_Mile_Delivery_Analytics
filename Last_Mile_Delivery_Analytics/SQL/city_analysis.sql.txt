@@ -1,0 +1,13 @@
+-- City Wise Orders
+SELECT city,
+COUNT(*) AS total_orders
+FROM deliveries
+GROUP BY city
+ORDER BY total_orders DESC;
+
+-- Average Delay by City
+SELECT city,
+ROUND(AVG(delay_days::numeric),2) AS avg_delay
+FROM deliveries
+GROUP BY city
+ORDER BY avg_delay DESC;

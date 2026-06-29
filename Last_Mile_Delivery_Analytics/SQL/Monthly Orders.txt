@@ -1,0 +1,7 @@
+-- Monthly Orders
+
+SELECT month,
+COUNT(*) AS total_orders
+FROM deliveries
+GROUP BY month
+ORDER BY total_orders DESC;

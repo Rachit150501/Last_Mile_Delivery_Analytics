@@ -1,0 +1,31 @@
+-- Total Orders
+
+SELECT COUNT(*) AS total_orders
+FROM deliveries;
+
+-- Total Revenue
+
+SELECT ROUND(SUM(order_value_inr::numeric),2) AS total_revenue
+FROM deliveries;
+
+-- Delayed Orders
+
+SELECT COUNT(*) AS delayed_orders
+FROM deliveries
+WHERE is_delayed='Yes';
+
+-- Delay Percentage
+
+SELECT ROUND(
+100.0 * SUM(CASE WHEN is_delayed='Yes' THEN 1 ELSE 0 END)
+/ COUNT(*),2
+) AS delay_percentage
+FROM deliveries;
+
+-- SLA Breach Percentage
+
+SELECT ROUND(
+100.0 * SUM(CASE WHEN sla_breached='Yes' THEN 1 ELSE 0 END)
+/ COUNT(*),2
+) AS sla_breach_percentage
+FROM deliveries;

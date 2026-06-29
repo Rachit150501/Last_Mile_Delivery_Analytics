@@ -1,0 +1,16 @@
+-- Vendor Orders
+
+SELECT vendor,
+COUNT(*) AS total_orders
+FROM deliveries
+GROUP BY vendor
+ORDER BY total_orders DESC;
+
+-- Vendor SLA Breaches
+
+SELECT vendor,
+COUNT(*) AS sla_breaches
+FROM deliveries
+WHERE sla_breached='Yes'
+GROUP BY vendor
+ORDER BY sla_breaches DESC;
