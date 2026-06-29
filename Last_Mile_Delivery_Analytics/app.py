@@ -164,7 +164,7 @@ with col2:
 
 st.divider()
 
-st.header("💰 Revenue by Product Category")
+st.header(" Revenue by Product Category")
 
 category_revenue = (
     filtered_df.groupby("Product_Category")["Order_Value_INR"]
@@ -184,6 +184,106 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 
+
+st.divider()
+
+st.header("🏙️ Orders by City")
+
+city_orders = (
+    filtered_df.groupby("City")
+    .size()
+    .reset_index(name="Orders")
+)
+
+fig = px.bar(
+    city_orders,
+    x="City",
+    y="Orders",
+    color="Orders",
+    text="Orders",
+    title="Orders by City"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+st.divider()
+
+st.header("🚚 Vendor Performance")
+
+vendor_orders = (
+    filtered_df.groupby("Vendor")
+    .size()
+    .reset_index(name="Orders")
+)
+
+fig = px.bar(
+    vendor_orders,
+    x="Vendor",
+    y="Orders",
+    color="Orders",
+    text="Orders",
+    title="Vendor Performance"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+
+st.divider()
+
+st.header("📈 Monthly Order Trend")
+
+monthly_orders = (
+    filtered_df.groupby("Month")
+    .size()
+    .reset_index(name="Orders")
+)
+
+fig = px.line(
+    monthly_orders,
+    x="Month",
+    y="Orders",
+    markers=True,
+    title="Monthly Orders"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+st.divider()
+
+st.header("⚠ Delay Reasons")
+
+delay = (
+    filtered_df.groupby("Delay_Reason")
+    .size()
+    .reset_index(name="Orders")
+)
+
+fig = px.bar(
+    delay,
+    x="Delay_Reason",
+    y="Orders",
+    color="Orders"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+
+
+st.divider()
+
+st.header(" Download Dataset")
+
+csv = filtered_df.to_csv(index=False)
+
+st.download_button(
+    label="Download CSV",
+    data=csv,
+    file_name="Last_Mile_Delivery.csv",
+    mime="text/csv"
+)
 
 # -------------------------------
 # Dataset Information
